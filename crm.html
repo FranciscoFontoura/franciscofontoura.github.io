@@ -149,16 +149,18 @@
             <label for="email" class="placeholder"> Email</label>
         </div>
         <button class="submit">Enviar</button>
-        <div class="subtitle" id="confirmation"></div>
+        <div class="subtitle" id="confirmation">Inserir dados e confirmar</div>
     </form>
     <script>
         document.getElementById("myForm").addEventListener('submit', handleForm);
         function handleForm(event) {
             event.preventDefault();
-            document.getElementById("confirmation").innerText = "Cliente incluido com sucesso!";
+            a = document.getElementById("confirmation");
+            a.innerText = "Cliente incluido com sucesso!";
+            a.style.color = "green";
             setTimeout(function(){
                 location.reload();
-            },2000)
+            },500)
         }
     </script>
 </body>
